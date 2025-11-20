@@ -25,7 +25,7 @@ namespace StudentSuperApi.Controllers
                 .Include(a => a.School)
                 .Select(a => new
                 {
-                    a.Admin_Id_pk,
+                    a.AdminID,
                     a.AdminName,
                     a.Username,
                     a.Admin_ID,
@@ -43,7 +43,7 @@ namespace StudentSuperApi.Controllers
         {
             var admin = await _context.SchoolAdmins
                 .Include(a => a.School)
-                .FirstOrDefaultAsync(a => a.Admin_Id_pk == id);
+                .FirstOrDefaultAsync(a => a.AdminID == id);
 
             if (admin == null) return NotFound();
 
