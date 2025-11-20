@@ -41,7 +41,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<SchoolAdminInfo>()
             .HasOne(sa => sa.School)
             .WithMany(s => s.Admins)   // <-- specify inverse navigation here
-            .HasForeignKey(sa => sa.SchoolID)
+            .HasForeignKey(sa => sa.School_Id_pk)
             .OnDelete(DeleteBehavior.Restrict);
 
         modelBuilder.Entity<SchoolAdminInfo>()

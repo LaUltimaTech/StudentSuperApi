@@ -6,7 +6,7 @@ namespace StudentSuperApi.Models;
 public class State
 {
     [Key]
-    public int StateID { get; set; }
+    public int State_Id_pk { get; set; }
     public string StateName { get; set; } = string.Empty;
 
     // Navigation properties

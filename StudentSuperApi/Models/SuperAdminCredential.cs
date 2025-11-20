@@ -7,7 +7,8 @@ namespace StudentSuperApi.Models;
 public class SuperAdminCredential
 {
     [Key]
-    public int SuperAdminID { get; set; }
+   
+    public int SuperAdmin_Id_pk { get; set; }
     public string UserName { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public bool IsActive { get; set; } = true;

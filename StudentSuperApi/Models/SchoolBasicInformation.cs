@@ -8,11 +8,11 @@ namespace StudentSuperApi.Models;
 public class SchoolBasicInformation
 {
     [Key]
-    public int SchoolID { get; set; }
+    public int School_Id_pk { get; set; }
     public string SchoolName { get; set; } = string.Empty;
     public string? SchoolAddress { get; set; }
-    public int StateID { get; set; }
-    public int CityID { get; set; }
+    public int State_Id_fk { get; set; }
+    public int City_Id_fk { get; set; }
     public string? Email { get; set; }
     public string? MobileNo { get; set; }
     public string? Website { get; set; }

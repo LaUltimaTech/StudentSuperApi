@@ -9,10 +9,10 @@ namespace StudentSuperApi.Models
     public class SchoolAdminInfo
     {
         [Key]
-        public int AdminID { get; set; }
+        public int Admin_Id_pk { get; set; }
         public string AdminName { get; set; }
         public DateTime? DateOfBirth { get; set; }
-        public int SchoolID { get; set; }
+        public int School_Id_pk { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Admin_ID { get; set; }

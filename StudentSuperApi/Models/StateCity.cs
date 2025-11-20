@@ -6,8 +6,8 @@ namespace StudentSuperApi.Models;
 public class StateCity
 {
     [Key]
-    public int CityID { get; set; }
-    public int StateID { get; set; }
+    public int City_Id_pk { get; set; }
+    public int State_Id_fk { get; set; }
     public string CityName { get; set; } = string.Empty;
 
     // Navigation properties

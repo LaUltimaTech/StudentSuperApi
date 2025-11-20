@@ -14,6 +14,7 @@ namespace StudentSuperApi.Controllers
         public async Task<IActionResult> GetCities(int stateId)
         {
             var cities = await _context.StateCities
+                .Where(c => c.State_Id_fk == stateId)
                 .Where(c => c.StateID == stateId)
                 .ToListAsync();
             return Ok(cities);
