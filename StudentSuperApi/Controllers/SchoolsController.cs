@@ -72,7 +72,7 @@ namespace StudentSuperApi.Controllers
         public async Task<IActionResult> GetSchoolNames()
         {
             var schools = await _context.Schools
-                .Select(s => new { s.SchoolID, s.SchoolName })
+                .Select(s => new { s.School_Id_pk, s.SchoolName })
                 .ToListAsync();
             return Ok(schools);
         }
