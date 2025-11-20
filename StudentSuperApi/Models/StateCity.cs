@@ -7,7 +7,11 @@ public class StateCity
 {
     [Key]
     public int City_Id_pk { get; set; }
+
+    [Column("State_Id_fk")]
+    [ForeignKey(nameof(State))]
     public int State_Id_fk { get; set; }
+
     public string CityName { get; set; } = string.Empty;
 
     // Navigation properties
