@@ -93,7 +93,7 @@ namespace StudentSuperApi.Controllers
 
             existing.AdminName = admin.AdminName;
             existing.DateOfBirth = admin.DateOfBirth;
-            existing.School_Id_pk = admin.School_Id_pk;
+            existing.School_Id_fk = admin.School_Id_fk;
             existing.Username = admin.Username;
             existing.Password = admin.Password;
             existing.Admin_ID = admin.Admin_ID;
