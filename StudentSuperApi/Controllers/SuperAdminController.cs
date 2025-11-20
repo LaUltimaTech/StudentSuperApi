@@ -36,7 +36,7 @@ namespace StudentSuperApi.Controllers
             return Ok(new
             {
                 Message = "Login successful",
-                SuperAdminID = superAdmin.SuperAdminID,
+                SuperAdminID = superAdmin.SuperAdmin_Id_pk,
                 UserName = superAdmin.UserName
             });
         }

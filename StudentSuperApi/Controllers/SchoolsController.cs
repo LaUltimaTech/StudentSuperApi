@@ -43,8 +43,8 @@ namespace StudentSuperApi.Controllers
 
             existing.SchoolName = school.SchoolName;
             existing.SchoolAddress = school.SchoolAddress;
-            existing.StateID = school.StateID;
-            existing.CityID = school.CityID;
+            existing.State_Id_fk = school.State_Id_fk;
+            existing.City_Id_fk = school.City_Id_fk;
             existing.Email = school.Email;
             existing.MobileNo = school.MobileNo;
             existing.Website = school.Website;
@@ -72,7 +72,7 @@ namespace StudentSuperApi.Controllers
         public async Task<IActionResult> GetSchoolNames()
         {
             var schools = await _context.Schools
-                .Select(s => new { s.SchoolID, s.SchoolName })
+                .Select(s => new { s.School_Id_pk, s.SchoolName })
                 .ToListAsync();
             return Ok(schools);
         }
